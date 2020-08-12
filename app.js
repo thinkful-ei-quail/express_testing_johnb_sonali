@@ -5,9 +5,7 @@ const app = express();
 app.use(morgan('common'));
 
 app.get('/', (req, res) => {
-  res.send('Hello Express');
+  res.status(200).send('Hello Express!');
 });
 
-app.listen(8000, () => {
-  console.log('Server started on PORT 8000');
-});
+module.exports = app;
